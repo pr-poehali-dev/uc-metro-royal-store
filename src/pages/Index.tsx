@@ -24,12 +24,20 @@ interface Review {
 }
 
 const products: Product[] = [
-  { id: 1, name: 'Стартовый пакет', uc: 60, price: 59, bonus: '+6 UC' },
-  { id: 2, name: 'Базовый пакет', uc: 325, price: 299, bonus: '+32 UC' },
-  { id: 3, name: 'Популярный пакет', uc: 660, price: 599, bonus: '+66 UC', popular: true },
-  { id: 4, name: 'Выгодный пакет', uc: 1800, price: 1499, bonus: '+180 UC', popular: true },
-  { id: 5, name: 'Премиум пакет', uc: 3850, price: 2999, bonus: '+385 UC' },
-  { id: 6, name: 'Мега пакет', uc: 8100, price: 5999, bonus: '+810 UC' },
+  { id: 1, name: 'Мини', uc: 16, price: 19, bonus: '+2 UC' },
+  { id: 2, name: 'Стартовый', uc: 60, price: 59, bonus: '+6 UC' },
+  { id: 3, name: 'Эконом', uc: 120, price: 119, bonus: '+12 UC' },
+  { id: 4, name: 'Базовый', uc: 325, price: 299, bonus: '+32 UC' },
+  { id: 5, name: 'Стандарт', uc: 525, price: 499, bonus: '+52 UC', popular: true },
+  { id: 6, name: 'Популярный', uc: 660, price: 599, bonus: '+66 UC', popular: true },
+  { id: 7, name: 'Оптимальный', uc: 1050, price: 999, bonus: '+105 UC', popular: true },
+  { id: 8, name: 'Выгодный', uc: 1800, price: 1499, bonus: '+180 UC' },
+  { id: 9, name: 'Продвинутый', uc: 2700, price: 2199, bonus: '+270 UC' },
+  { id: 10, name: 'Премиум', uc: 3850, price: 2999, bonus: '+385 UC' },
+  { id: 11, name: 'Элитный', uc: 6000, price: 4499, bonus: '+600 UC' },
+  { id: 12, name: 'Мега', uc: 8100, price: 5999, bonus: '+810 UC' },
+  { id: 13, name: 'Ультра', uc: 10500, price: 7499, bonus: '+1050 UC' },
+  { id: 14, name: 'Максимум', uc: 16200, price: 11999, bonus: '+1620 UC' },
 ];
 
 const reviews: Review[] = [
