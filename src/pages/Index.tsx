@@ -227,9 +227,15 @@ const Index = () => {
                           </p>
                         </Card>
                       )}
-                      <Button onClick={handleLogout} variant="outline" className="w-full">
-                        Выйти
-                      </Button>
+                      <div className="flex gap-3">
+                        <Button onClick={handleLogout} variant="outline" className="flex-1">
+                          Выйти
+                        </Button>
+                        <Button onClick={handleLogout} variant="destructive" className="flex-1">
+                          <Icon name="Trash2" className="mr-2" size={18} />
+                          Удалить аккаунт
+                        </Button>
+                      </div>
                     </div>
                   </DialogContent>
                 </Dialog>
