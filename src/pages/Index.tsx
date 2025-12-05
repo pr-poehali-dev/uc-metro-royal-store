@@ -406,9 +406,9 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="relative py-20 md:py-32">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto space-y-6 animate-slide-up">
+      <section id="home" className="relative py-20 md:py-32 cyber-grid animate-fade-in">
+        <div className="container mx-auto px-4 text-center animate-slide-in">
+          <div className="max-w-4xl mx-auto space-y-6">
             <h2 className="text-4xl md:text-6xl font-orbitron font-black text-primary neon-text leading-tight">
               UC ДЛЯ PUBG MOBILE
             </h2>
@@ -441,7 +441,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="calculator" className="py-16 bg-muted/20 relative">
+      <section id="calculator" className="py-16 bg-muted/20 relative animate-fade-in">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-12 text-primary neon-text">
             Калькулятор UC
@@ -499,7 +499,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="catalog" className="py-16 relative">
+      <section id="catalog" className="py-16 relative animate-fade-in">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-12 text-primary neon-text">
             Каталог пакетов UC
@@ -508,7 +508,7 @@ const Index = () => {
             {products.map((product) => (
               <Card
                 key={product.id}
-                className={`relative p-6 bg-card/80 backdrop-blur border-2 transition-all duration-300 hover:scale-105 hover:border-primary ${
+                className={`relative p-6 bg-card/80 backdrop-blur border-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 hover:border-primary animate-fade-in ${
                   product.popular ? 'border-accent' : 'border-primary/30'
                 }`}
               >
@@ -546,14 +546,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="vip" className="py-16 bg-muted/20">
+      <section id="vip" className="py-16 bg-muted/20 animate-fade-in">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-12 text-primary neon-text">
             VIP статусы
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {Object.entries(vipLevels).filter(([key]) => key !== 'none').map(([key, level]) => (
-              <Card key={key} className="p-6 bg-card/80 border-2 border-primary/30 hover:border-primary transition-all">
+              <Card key={key} className="p-6 bg-card/80 border-2 border-primary/30 hover:border-primary hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all duration-500 animate-fade-in">
                 <div className="text-center space-y-4">
                   <Icon name={level.icon as any} className={`mx-auto ${level.color}`} size={64} />
                   <h3 className={`text-2xl font-orbitron font-bold ${level.color}`}>{level.name}</h3>
@@ -596,14 +596,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-16">
+      <section id="reviews" className="py-16 animate-fade-in">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-12 text-primary neon-text">
             Отзывы клиентов
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {reviews.map((review) => (
-              <Card key={review.id} className="p-6 bg-card/80 border-primary/30">
+              <Card key={review.id} className="p-6 bg-card/80 border-primary/30 hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 animate-fade-in">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <p className="font-bold text-lg">{review.name}</p>
@@ -622,13 +622,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-16 bg-muted/20">
+      <section id="faq" className="py-16 bg-muted/20 animate-fade-in">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-12 text-primary neon-text">
             Вопросы и ответы
           </h2>
           <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
-            <AccordionItem value="item-1" className="bg-card/80 border border-primary/30 px-6 rounded">
+            <AccordionItem value="item-1" className="bg-card/80 border border-primary/30 px-6 rounded hover:border-primary transition-all duration-300">
               <AccordionTrigger className="text-lg font-rajdhani font-bold hover:text-primary">
                 Как долго идут UC на аккаунт?
               </AccordionTrigger>
@@ -636,7 +636,7 @@ const Index = () => {
                 UC поступают на ваш игровой аккаунт в течение 1-5 минут после оплаты. В редких случаях доставка может занять до 30 минут.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2" className="bg-card/80 border border-primary/30 px-6 rounded">
+            <AccordionItem value="item-2" className="bg-card/80 border border-primary/30 px-6 rounded hover:border-primary transition-all duration-300">
               <AccordionTrigger className="text-lg font-rajdhani font-bold hover:text-primary">
                 Как получить VIP статус?
               </AccordionTrigger>
@@ -644,7 +644,7 @@ const Index = () => {
                 VIP статус присваивается автоматически при достижении определённой суммы покупок. Скидки начисляются сразу после получения статуса.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3" className="bg-card/80 border border-primary/30 px-6 rounded">
+            <AccordionItem value="item-3" className="bg-card/80 border border-primary/30 px-6 rounded hover:border-primary transition-all duration-300">
               <AccordionTrigger className="text-lg font-rajdhani font-bold hover:text-primary">
                 Безопасно ли покупать UC у вас?
               </AccordionTrigger>
@@ -652,7 +652,7 @@ const Index = () => {
                 Да, абсолютно безопасно. Мы используем официальные методы пополнения и не запрашиваем пароли от вашего аккаунта.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4" className="bg-card/80 border border-primary/30 px-6 rounded">
+            <AccordionItem value="item-4" className="bg-card/80 border border-primary/30 px-6 rounded hover:border-primary transition-all duration-300">
               <AccordionTrigger className="text-lg font-rajdhani font-bold hover:text-primary">
                 Можно ли купить любое количество UC?
               </AccordionTrigger>
